@@ -1,4 +1,4 @@
-clib_examples
+C Library by Examples
 =============
 
 Examples on how to use c standard library. I have included as many functions or Macro as possible for each header file. There are still some funtions missing from the examples. It might be because of C version.
@@ -21,6 +21,9 @@ C Header that defines macro:
 
 ####float
 ####limits
+**Sizes of integral types**
+This header defines constants with the limits of fundamental integral types for the specific system and compiler implementation used.
+
 ####locale
 The C language supports localization specific settings, such as culture-specific date formats or country-specific currency symbols.
 
@@ -31,6 +34,11 @@ Each system and specific compiler implementation may provide different choices o
 
 ####math
 ####miscellaneous
+**Not a header**
+The directory includes some examples of special notes of C language.
+* preprocess
+* escape
+* trigraph
 ####setjmp
 **Non local jumps**
 The tools provided through this header file allow the programmer to bypass the normal function call and return discipline, by providing the means to perform jumps preserving the calling environment.
@@ -53,6 +61,14 @@ In C++, which supports those directly, the header simply contains a macro that c
 This library uses what are called streams to operate with physical devices such as keyboards, printers, terminals or with any other type of files supported by the system. Streams are an abstraction to interact with these in an uniform way; All streams have similar properties independently of the individual characteristics of the physical media they are associated with.
 ####stdlib
 ####string
+C Strings
+This header file defines several functions to manipulate C strings and arrays.
+
+Functions:
+* Copying
+* Concat
+* Comparison
+* Searching
 ####time
 This header file contains definitions of functions to get and manipulate date and time information.
 
