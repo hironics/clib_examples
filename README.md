@@ -17,7 +17,7 @@ Major functions are in two sets
 
 ####errno
 C Header that defines macro: 
-< errno
+> errno
 
 ####float
 ####limits
