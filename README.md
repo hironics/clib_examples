@@ -57,6 +57,10 @@ The purpose in C of this header is to add a bool type and the true and false val
 In C++, which supports those directly, the header simply contains a macro that can be used to check if the type is supported:
 
 ####stddef
+**C Standard definitions**
+This header defines several types implicitly generated or used by certain language expressions.
+
+
 ####stdio
 This library uses what are called streams to operate with physical devices such as keyboards, printers, terminals or with any other type of files supported by the system. Streams are an abstraction to interact with these in an uniform way; All streams have similar properties independently of the individual characteristics of the physical media they are associated with.
 ####stdlib
@@ -69,6 +73,7 @@ Functions:
 * Concat
 * Comparison
 * Searching
+
 ####time
 This header file contains definitions of functions to get and manipulate date and time information.
 
