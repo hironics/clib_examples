@@ -22,15 +22,32 @@ C Header that defines macro:
 ####float
 ####limits
 ####locale
+The C language supports localization specific settings, such as culture-specific date formats or country-specific currency symbols.
+
+Each system and specific compiler implementation may provide different choices of locales to be selected (using function setlocale), but at least two locales are available to choose for any C program:
+
+* The "C" locale is the minimal locale. It is a rather neutral locale which has the same settings across all systems and compilers, and therefore the exact results of a program using this locale are predictable. This is the locale used by default on all C programs.
+* The system's default locale (which is specified by an empty C-string: ""). It is the locale configuration provided by the environment where the application is running. This usually contains more localization information than the "C" locale.
+
 ####math
 ####miscellaneous
 ####setjmp
+**Non local jumps**
+The tools provided through this header file allow the programmer to bypass the normal function call and return discipline, by providing the means to perform jumps preserving the calling environment.
+
+The header provides, a function, a macro with functional form and a specific type:
+
 ####signal
 Some running environments use signals to inform running processes of certain events. These events may be related to errors performed by the program code, like a wrong arithmetical operation or to exceptional situations, such as a request to interrupt the program.
 
 Signals generally represent situations where the program has either been requested to terminate or an unrecoverable error has happened, therefore handling a signal allows for either perform pre-termination cleanup operations or try to recover from the error in some way.
 ####stdarg
-####stdbool
+####stdbool (C99)
+**Boolean type**
+The purpose in C of this header is to add a bool type and the true and false values as macro definitions.
+
+In C++, which supports those directly, the header simply contains a macro that can be used to check if the type is supported:
+
 ####stddef
 ####stdio
 This library uses what are called streams to operate with physical devices such as keyboards, printers, terminals or with any other type of files supported by the system. Streams are an abstraction to interact with these in an uniform way; All streams have similar properties independently of the individual characteristics of the physical media they are associated with.
