@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 /*
 stdio library. the library which most of problem will include.
 
@@ -12,6 +11,7 @@ fgetc  // get one char from file handler
 fseek: seek location in file
 fsetpos; set positon
 fgetpos: get positon
+rewind: go back to the beginning of file
 
 fflush : flush buffer
 
@@ -22,13 +22,12 @@ tmpfile: create a tmp file and a file handler (wb+)
 
 
 #define CON_SIZE 1024
-//#define
 
+/*
+tranverse a file and locate the position
+*/
 void tranfile(FILE * f, fpos_t * pos)
 {
-    /*
-    tranverse a file and locate the position
-    */
     fseek(f, 100, SEEK_SET);
     printf("current position is: %ld\n", ftell(f));
 
@@ -40,7 +39,6 @@ void tranfile(FILE * f, fpos_t * pos)
 
     rewind(f);
     printf("current position is: %ld\n", ftell(f));
-
 
 }
 
@@ -86,6 +84,8 @@ int main()
     fgetpos(tmp, &curr);
     printf("current position is: %ld\n", curr);
 
+    //reopen a file to reuse the same file handler
+    freopen("/etc/passwd", "r", tmp);
     tranfile(tmp, &curr);
 
     c = getchar();
